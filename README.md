@@ -3,11 +3,11 @@
 You must have Python installed. It can be downloaded [here](https://www.python.org).
 
 You must first install some packages before using this tool : open command prompt and type those commands :
-```pip3 install opencv-python```  
-```pip3 install pillow```  
-```pip3 install tkinter```  
-```pip3 install numpy```  
-If these commands do not work, try replacing ```pip3```with simply ```pip```.  
+```pip3 install opencv-python```<br />
+```pip3 install pillow```<br />
+```pip3 install tkinter```<br />
+```pip3 install numpy```<br />
+If these commands do not work, try replacing ```pip3```with simply ```pip```.<br />
 
 Make sure both ```.py```files are in the same directory.
 
