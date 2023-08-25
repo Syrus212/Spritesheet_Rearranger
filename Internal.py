@@ -42,6 +42,8 @@ def create_sheet(PathToSpritesheet, anchor, path, order):
             max_x = x2 - x1
         if (y2 - y1 ) > max_y:
             max_y = y2 - y1
+    max_x += 3
+    max_y += 3
     #print(max_x, max_y)
 
     # Specify image dimensions
