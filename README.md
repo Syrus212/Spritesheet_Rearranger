@@ -6,7 +6,7 @@ You must first install some packages before using this tool : open command promp
 <br />
 ```pip3 install opencv-python```<br />
 ```pip3 install pillow```<br />
-```pip3 install tkinter```<br />
+```pip3 install tk```<br />
 ```pip3 install numpy```<br />
 
 If these commands do not work, try replacing ```pip3```with simply ```pip```.
