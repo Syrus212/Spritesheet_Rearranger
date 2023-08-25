@@ -8,6 +8,7 @@ You must first install some packages before using this tool : open command promp
 ```pip3 install pillow```<br />
 ```pip3 install tk```<br />
 ```pip3 install numpy```<br />
+```pip3 install easygui```<br />
 
 If these commands do not work, try replacing ```pip3```with simply ```pip```.
 
