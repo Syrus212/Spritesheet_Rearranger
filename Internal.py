@@ -2,7 +2,7 @@ import cv2
 from PIL import Image, ImageDraw
 from math import ceil
 
-def create_sheet(PathToSpritesheet, anchor, path):
+def create_sheet(PathToSpritesheet, anchor, path, order):
 
     if not(PathToSpritesheet):
         return
@@ -42,7 +42,7 @@ def create_sheet(PathToSpritesheet, anchor, path):
             max_x = x2 - x1
         if (y2 - y1 ) > max_y:
             max_y = y2 - y1
-    print(max_x, max_y)
+    #print(max_x, max_y)
 
     # Specify image dimensions
     width = max_x * len(bounding_boxes)
@@ -51,9 +51,12 @@ def create_sheet(PathToSpritesheet, anchor, path):
     # Create a new image with white background
     source_image = Image.open(PathToSpritesheet)
 
-    new_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    new_image = Image.new("RGBA", (width + 2, height + 2), (0, 0, 0, 0))
 
-    sorted_bounding_boxes = sorted(bounding_boxes, key=lambda item: (item[0], item[2]))
+    if order:
+        sorted_bounding_boxes = sorted(bounding_boxes, key=lambda item: ((item[1] + (item[3] - item[1]) // 2), (item[0] + (item[2] - item[0]) // 2)))
+    else:
+        sorted_bounding_boxes = sorted(bounding_boxes, key=lambda item: ((item[0] + (item[2] - item[0]) // 2), (item[1] + (item[3] - item[1]) // 2)))
     c = -1
 
     for x1, y1, x2, y2 in sorted_bounding_boxes:
@@ -81,7 +84,7 @@ def create_sheet(PathToSpritesheet, anchor, path):
                     adjusted_y = max_y - (y2 - y1)
 
         region = source_image.crop((x1, y1, x2, y2))
-        new_image.paste(region, (max_x * c + adjusted_x, adjusted_y))
+        new_image.paste(region, (max_x * c + adjusted_x + 1, adjusted_y + 1))
 
     # Save the new image
     new_image.save(f'{path}Result.png')
