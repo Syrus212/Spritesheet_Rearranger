@@ -18,6 +18,6 @@ Right click the ```main.py```file and click _Edit with Idle_. Then from the top 
 
 Anchor model :
 
-WIP
+![Anchor model](Anchor model.png)
 
 Note : the sprites are order based on the upper-left hand corner of each sprite's bounding box. They are ordered from left to right and if two sprites have their corner on the same X coordinate from top to bottom.
