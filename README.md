@@ -13,7 +13,7 @@ If these commands do not work, try replacing ```pip3```with simply ```pip```.
 
 Make sure both ```.py```files are in the same directory.
 
-Double click the ```main.py```file and select the spritesheet you want to clean up. The rearranged spritesheet will be called ```Result.png```and will be placed in the same directory as the source file.
+Right click the ```main.py```file and click _Edit with Idle_. Then from the top menu click _Run_ and choose _Run Module_. Select the spritesheet you want to clean up. The rearranged spritesheet will be called ```Result.png```and will be placed in the same directory as the source file.
 
 Anchor model :
 
