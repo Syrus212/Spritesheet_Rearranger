@@ -2,7 +2,7 @@
 
 You must have Python installed. It can be downloaded [here](https://www.python.org).
 
-You must first install some packages before using this tool : open command prompt and type those commands :
+You must first install some packages before using this tool : open command prompt and type those commands :<br />
 <br />
 ```pip3 install opencv-python```<br />
 ```pip3 install pillow```<br />
