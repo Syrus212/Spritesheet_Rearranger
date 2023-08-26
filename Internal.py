@@ -46,8 +46,10 @@ def create_sheet(PathToSpritesheet, anchor, path, order):
     max_y += 3
     #print(max_x, max_y)
 
+    filtered_bounding_boxes = [item for item in bounding_boxes if (item[2] - item[0]) * (item[3] - item[1]) >= 200]
+
     # Specify image dimensions
-    width = max_x * len(bounding_boxes)
+    width = max_x * len(filtered_bounding_boxes)
     height = max_y
 
     # Create a new image with white background
@@ -56,9 +58,9 @@ def create_sheet(PathToSpritesheet, anchor, path, order):
     new_image = Image.new("RGBA", (width + 2, height + 2), (0, 0, 0, 0))
 
     if order:
-        sorted_bounding_boxes = sorted(bounding_boxes, key=lambda item: ((item[1] + (item[3] - item[1]) // 2), (item[0] + (item[2] - item[0]) // 2)))
+        sorted_bounding_boxes = sorted(filtered_bounding_boxes, key=lambda item: ((item[1] + (item[3] - item[1]) // 2), (item[0] + (item[2] - item[0]) // 2)))
     else:
-        sorted_bounding_boxes = sorted(bounding_boxes, key=lambda item: ((item[0] + (item[2] - item[0]) // 2), (item[1] + (item[3] - item[1]) // 2)))
+        sorted_bounding_boxes = sorted(filtered_bounding_boxes, key=lambda item: ((item[0] + (item[2] - item[0]) // 2), (item[1] + (item[3] - item[1]) // 2)))
     c = -1
 
     for x1, y1, x2, y2 in sorted_bounding_boxes:
@@ -80,7 +82,6 @@ def create_sheet(PathToSpritesheet, anchor, path, order):
                 
                 case 4 | 5 | 6:
                     adjusted_y = (max_y - (y2 - y1)) // 2
-                    print(adjusted_y)
 
                 case 7 | 8 | 9:
                     adjusted_y = max_y - (y2 - y1)
