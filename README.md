@@ -1,6 +1,6 @@
 # Spritesheet_Rearranger
 
-You must have Python installed. It can be downloaded [here](https://www.python.org).
+You must have Python installed. It can be downloaded [here](https://www.python.org). Make sure to enable ``Add python tp PATH```in the install program.
 
 You must first install some packages before using this tool : open command prompt and type those commands :<br />
 <br />
@@ -15,6 +15,8 @@ If these commands do not work, try replacing ```pip3```with simply ```pip```.
 Make sure both ```.py```files are in the same directory.
 
 Right click the ```main.py```file and click _Edit with Idle_. Then from the top menu click _Run_ and choose _Run Module_. Select the spritesheet you want to clean up. The rearranged spritesheet will be called ```Result.png```and will be placed in the same directory as the source file.
+
+Note for the team : the current spritesheets contain every single body part within them. This only needs to have each body part variations inside one image (so for example if you have several sprites for the feet, create one image with every foot variation inside) and give it to the program.
 
 Anchor model :
 
