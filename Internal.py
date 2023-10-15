@@ -2,7 +2,7 @@ import cv2
 from PIL import Image, ImageDraw
 from math import ceil
 
-def create_sheet(PathToSpritesheet, anchor, path, order):
+def create_sheet(PathToSpritesheet, anchor, path, order, name):
 
     if not(PathToSpritesheet):
         return
@@ -90,4 +90,4 @@ def create_sheet(PathToSpritesheet, anchor, path, order):
         new_image.paste(region, (max_x * c + adjusted_x + 1, adjusted_y + 1))
 
     # Save the new image
-    new_image.save(f'{path}Result.png')
+    new_image.save(f'{path}{name}Result.png')
