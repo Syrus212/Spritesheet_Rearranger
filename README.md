@@ -22,6 +22,8 @@ Anchor model :
 
 ![Anchor model](https://github.com/Syrus212/Spritesheet_Rearranger/blob/main/Anchor%20model.png)
 
+Note for the team : the current spritesheets contain every single body part within them. This only needs to have each body part variations inside one image (so for example if you have several sprites for the feet, create one image with every foot variation inside) and give it to the program.
+
 Note 1 : the sprites are ordered based on the upper-left hand corner of each sprite's bounding box. They are ordered from left to right and if two sprites have their corner on the same X coordinate from top to bottom.
 
 Note 2 : for spritesheets with multiple rows (like color variations, eyes...), create the spritesheet for each row separately and then assemble the full spritesheet by hand. This tool can't guess which sprites are supposed to be on a row and which sprites aren't.
