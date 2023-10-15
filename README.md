@@ -20,6 +20,8 @@ Anchor model :
 
 ![Anchor model](https://github.com/Syrus212/Spritesheet_Rearranger/blob/main/Anchor%20model.png)
 
+More advanced guide on how to use this [here](https://docs.google.com/document/d/1_7ffUXJ9Euz9cPE18tUKmR307wTUofz47r0G7JTA0YE/edit?usp=sharing).
+
 Note 1 : the sprites are ordered based on the upper-left hand corner of each sprite's bounding box. They are ordered from left to right and if two sprites have their corner on the same X coordinate from top to bottom.
 
 Note 2 : for spritesheets with multiple rows (like color variations, eyes...), create the spritesheet for each row separately and then assemble the full spritesheet by hand. This tool can't guess which sprites are supposed to be on a row and which sprites aren't.
