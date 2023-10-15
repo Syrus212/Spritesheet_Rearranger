@@ -20,5 +20,6 @@ match order:
         order = True
 
 path = file[:file.rfind('/') + 1]
+name = file[file.rfind('/') + 1:-4]
 
-create_sheet(file, anchor, path, order)
+create_sheet(file, anchor, path, order, name)
