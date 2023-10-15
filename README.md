@@ -1,5 +1,7 @@
 # Spritesheet_Rearranger
 
+More advanced guide on how to use this [here](https://docs.google.com/document/d/1_7ffUXJ9Euz9cPE18tUKmR307wTUofz47r0G7JTA0YE/edit?usp=sharing).
+
 You must have Python installed. It can be downloaded [here](https://www.python.org).
 
 You must first install some packages before using this tool : open command prompt and type those commands :<br />
@@ -19,8 +21,6 @@ Right click the ```main.py```file and click _Edit with Idle_. Then from the top 
 Anchor model :
 
 ![Anchor model](https://github.com/Syrus212/Spritesheet_Rearranger/blob/main/Anchor%20model.png)
-
-More advanced guide on how to use this [here](https://docs.google.com/document/d/1_7ffUXJ9Euz9cPE18tUKmR307wTUofz47r0G7JTA0YE/edit?usp=sharing).
 
 Note 1 : the sprites are ordered based on the upper-left hand corner of each sprite's bounding box. They are ordered from left to right and if two sprites have their corner on the same X coordinate from top to bottom.
 
